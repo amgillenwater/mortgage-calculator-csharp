@@ -16,18 +16,18 @@ namespace MortgageCalculator
 
             Console.WriteLine("What percentage of your paycheck would you like to save, written as a decimal?");
             string savingsFromUser = Console.ReadLine();
-            double savingsRate = Convert.ToDouble(savingsFromUser);
+            decimal savingsRate = Convert.ToDecimal(savingsFromUser);
 
 
             //Console.WriteLine(costOfHome);
             //Console.WriteLine(salaryFromUser);
             //Console.WriteLine(savingsRate);
 
-            double interestRate = 0.04 / 12;
-            double downPayment = 0.25 * costOfHome;
-            double monthlySalary = annualSalary / 12;
-            double monthlySavings = monthlySalary * savingsRate;
-            double currentSavings = 0;
+            decimal interestRate = 0.04m / 12;
+            decimal downPayment = 0.25m * costOfHome;
+            decimal monthlySalary = annualSalary / 12;
+            decimal monthlySavings = monthlySalary * savingsRate;
+            decimal currentSavings = 0;
             int months = 0;
 
             while (currentSavings < downPayment)
